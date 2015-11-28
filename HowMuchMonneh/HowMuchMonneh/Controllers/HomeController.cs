@@ -13,6 +13,11 @@ namespace HowMuchMonneh.Controllers
             return View();
         }
 
+        public ActionResult Info()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
