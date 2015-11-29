@@ -37,6 +37,5 @@ G:\Projects\howmuchmonneh\HowMuchMonneh\HowMuchMonneh\bin\System.Web.WebPages.De
 G:\Projects\howmuchmonneh\HowMuchMonneh\HowMuchMonneh\bin\System.Web.WebPages.Razor.xml
 G:\Projects\howmuchmonneh\HowMuchMonneh\HowMuchMonneh\bin\Antlr3.Runtime.pdb
 G:\Projects\howmuchmonneh\HowMuchMonneh\HowMuchMonneh\bin\Newtonsoft.Json.xml
-G:\Projects\howmuchmonneh\HowMuchMonneh\HowMuchMonneh\obj\Debug\HowMuchMonneh.csprojResolveAssemblyReference.cache
 G:\Projects\howmuchmonneh\HowMuchMonneh\HowMuchMonneh\obj\Debug\HowMuchMonneh.dll
 G:\Projects\howmuchmonneh\HowMuchMonneh\HowMuchMonneh\obj\Debug\HowMuchMonneh.pdb

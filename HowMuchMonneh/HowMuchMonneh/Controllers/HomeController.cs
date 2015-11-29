@@ -11,21 +11,7 @@ namespace HowMuchMonneh.Controllers
     {
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
             new IncomeWebService().InvokeRequestResponseService().Wait();
-
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
 
             return View();
         }
