@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HowMuchMonneh.WebService;
 
 namespace HowMuchMonneh.Controllers
 {
@@ -13,14 +14,11 @@ namespace HowMuchMonneh.Controllers
             return View();
         }
 
-        public ActionResult Info()
-        {
-            return View();
-        }
-
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
+            new IncomeWebService().InvokeRequestResponseService().Wait();
+
 
             return View();
         }
