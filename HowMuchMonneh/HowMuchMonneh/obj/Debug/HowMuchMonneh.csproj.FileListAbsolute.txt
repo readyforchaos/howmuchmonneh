@@ -39,3 +39,4 @@ G:\Projects\howmuchmonneh\HowMuchMonneh\HowMuchMonneh\bin\Antlr3.Runtime.pdb
 G:\Projects\howmuchmonneh\HowMuchMonneh\HowMuchMonneh\bin\Newtonsoft.Json.xml
 G:\Projects\howmuchmonneh\HowMuchMonneh\HowMuchMonneh\obj\Debug\HowMuchMonneh.dll
 G:\Projects\howmuchmonneh\HowMuchMonneh\HowMuchMonneh\obj\Debug\HowMuchMonneh.pdb
+G:\Projects\howmuchmonneh\HowMuchMonneh\HowMuchMonneh\obj\Debug\HowMuchMonneh.csprojResolveAssemblyReference.cache

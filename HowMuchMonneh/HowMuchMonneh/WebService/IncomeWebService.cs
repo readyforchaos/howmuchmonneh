@@ -6,15 +6,17 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Web;
+using System.Web.DynamicData;
 using HowMuchMonneh.Models;
 using Newtonsoft.Json;
+using static System.Int32;
 
 namespace HowMuchMonneh.WebService
 {
     public class IncomeWebService
     {
 
-        public async Task InvokeRequestResponseService()
+        public async Task<T> InvokeRequestResponseService<T>(string gender, string age) where T : class
         {
             using (var client = new HttpClient())
             {
@@ -22,15 +24,9 @@ namespace HowMuchMonneh.WebService
                     {
                         new Person
                         {
-                            Gender = "M",
-                            Age = 26,
-                            Income = 1000000
-                        },
-                        new Person
-                        {
-                            Gender = "F",
-                            Age = 26,
-                            Income = 100000
+                            Gender = gender,
+                            Age = Parse(age),
+                            Income = 0
                         }
                 };
                 var propertyCount = typeof(Person).GetProperties().Count();
@@ -70,7 +66,9 @@ namespace HowMuchMonneh.WebService
                 if (response.IsSuccessStatusCode)
                 {
                     string result = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    var resultOutcome = JsonConvert.DeserializeObject<T>(result);
                     Debug.WriteLine("Result: {0}", result);
+                    return resultOutcome;
                 }
                 else
                 {
@@ -81,6 +79,7 @@ namespace HowMuchMonneh.WebService
 
                     string responseContent = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                     Debug.WriteLine(responseContent);
+                    return null;
                 }
             }
         }

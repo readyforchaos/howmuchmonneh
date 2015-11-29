@@ -130,6 +130,9 @@
     </Compile>
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\PersonTable.cs" />
+    <Compile Include="Models\ResponseInput.cs" />
+    <Compile Include="Models\ResultOutcome.cs" />
+    <Compile Include="Models\ResultPersonContent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebService\IncomeWebService.cs" />
   </ItemGroup>

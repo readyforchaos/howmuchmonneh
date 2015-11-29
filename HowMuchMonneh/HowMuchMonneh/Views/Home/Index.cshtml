@@ -2,16 +2,17 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <div class="wrapper">
     <h1>Predict your income</h1>
-    <form class="form" method="post" action="index">
-        <input type="text" class="gender" placeholder="Gender">
+    <form class="form" method="post" action="/Home/GetPredictionFromWebService">
+        <input id="gender" name="gender" type="text" class="gender" placeholder="Gender">
         <div>
 
         </div>
-        <input type="text" class="age" placeholder="Age">
+        <input id="age" name="age" type="text" class="age" placeholder="Age">
         <div>
 
         </div>
         <input type="submit" class="submit" value="Predict">
     </form>
-    <h1>YOU WILL EARN 500 000 KR</h1>
+    <h1 id="result
+        ">YOU WILL EARN 500 000 KR</h1>
 </div>
