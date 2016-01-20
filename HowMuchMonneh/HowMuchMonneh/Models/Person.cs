@@ -10,7 +10,7 @@ namespace HowMuchMonneh.Models
     {
         public string Gender { get; set; }
         public int Age { get; set; }
-        public int Income { get; set; }
+        public float Income { get; set; }
 
         public override string ToString()
         {

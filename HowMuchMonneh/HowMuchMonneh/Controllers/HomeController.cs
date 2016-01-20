@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using HowMuchMonneh.Models;
 using HowMuchMonneh.WebService;
+using System.Globalization;
 
 namespace HowMuchMonneh.Controllers
 {
@@ -28,20 +29,21 @@ namespace HowMuchMonneh.Controllers
             {
                 var resultResponse = _incomeWebService.InvokeRequestResponseService<ResultOutcome>(gender, age).Result;
 
-                if (resultResponse != null)
-                {
-                    var result = resultResponse.Results.Output1.Value.Values;
-                    PersonResult = new Person
+                    if (resultResponse != null)
                     {
-                        Gender = result[0, 0],
-                        Age = Int32.Parse(result[0, 1]),
-                        Income = Int32.Parse(result[0, 2])
+                        var result = resultResponse.Results.Output1.Value.Values;
+                        PersonResult = new Person
+                        {
+                            Gender = result[0, 0],
+                            Age = Int32.Parse(result[0, 1]),
+                            Income = float.Parse(result[0, 3], CultureInfo.InvariantCulture.NumberFormat)
                     };
                 }
             }
 
+            ViewBag.myData = PersonResult.Income;
 
-            return RedirectToAction("index");
+            return new EmptyResult();
         }
 
         public ActionResult Index()
