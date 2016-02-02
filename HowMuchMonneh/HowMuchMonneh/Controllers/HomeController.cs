@@ -41,9 +41,8 @@ namespace HowMuchMonneh.Controllers
                 }
             }
 
-            ViewBag.myData = PersonResult.Income;
-
-            return new EmptyResult();
+            ViewBag.myData = PersonResult.Income.ToString();
+            return View("Index");
         }
 
         public ActionResult Index()

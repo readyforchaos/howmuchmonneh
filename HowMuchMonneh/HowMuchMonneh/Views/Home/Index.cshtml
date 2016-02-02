@@ -1,5 +1,6 @@
 ﻿<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
 <div class="wrapper">
     <h1>Predict your income</h1>
     <form class="form" method="post" action="/Home/GetPredictionFromWebService">
@@ -13,5 +14,5 @@
         </div>
         <input type="submit" class="submit" value="Predict">
     </form>
-    <h1 id="result">@Html.Raw(ViewBag.Mydata)</h1>
+    <h1 id="result">@ViewBag.myData</h1>
 </div>
